@@ -3,10 +3,10 @@ const englishJson = require('./en.json');
 
 import { Version } from '@microsoft/sp-core-library';
 import {
+  BaseClientSideWebPart,
   IPropertyPaneConfiguration,
   PropertyPaneTextField
-} from '@microsoft/sp-property-pane';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+} from '@microsoft/sp-webpart-base';
 
 import {
   Environment,

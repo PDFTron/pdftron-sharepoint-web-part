@@ -37,7 +37,7 @@ const runYeomanSharePointGenerator = () => createProcessPromise(YO_COMMAND, [
   '--framework',
   'none',
   '--environment',
-  'spo',
+  'onprem',
   '--component-name',
   'PDFTronSample',
   '--component-description',
