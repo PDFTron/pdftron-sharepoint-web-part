@@ -4,7 +4,7 @@ A simple SharePoint web part build with PDFTron WebViewer
 ## Requirements
 
 ```
-node <= 10.x
+10.13 <= node <= 10.x
 ```
 
 To manually install the latest version of `Node 10.x`:
