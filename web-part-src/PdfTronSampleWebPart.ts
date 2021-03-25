@@ -1,5 +1,16 @@
 import WebViewer from '@pdftron/webviewer';
-const englishJson = require('./en.json');
+const dutchJson = require('./translation-nl.json');
+const englishJson = require('./translation-en.json');
+const frenchJson = require('./translation-fr.json');
+const germanJson = require('./translation-de.json');
+const italianJson = require('./translation-it.json');
+const japaneseJson = require('./translation-ja.json');
+const koreanJson = require('./translation-ko.json');
+const portugeseBrazilianJson = require('./translation-pt_br.json');
+const russianJson = require('./translation-ru.json');
+const simplifiedChineseJson = require('./translation-zh_cn.json');
+const spanishJson = require('./translation-es.json');
+const traditionalChineseJson = require('./translation-zh_tw.json');
 
 import { Version } from '@microsoft/sp-core-library';
 import {
@@ -67,10 +78,22 @@ export default class PdftronSampleWebPartWebPart extends BaseClientSideWebPart<I
       });
 
       (i as any).i18n.on('loaded', () => {
+        (i as any).i18n.addResourceBundle('nl', 'translation', dutchJson, true, true);
         (i as any).i18n.addResourceBundle('en', 'translation', englishJson, true, true);
-        (i as any).i18n.addResource('en', 'translation', 'option.signatureOverlay.addSignature', 'New signature!');
-        i.setLanguage('en');
+        (i as any).i18n.addResourceBundle('fr', 'translation', frenchJson, true, true);
+        (i as any).i18n.addResourceBundle('de', 'translation', germanJson, true, true);
+        (i as any).i18n.addResourceBundle('it', 'translation', italianJson, true, true);
+        (i as any).i18n.addResourceBundle('ja', 'translation', japaneseJson, true, true);
+        (i as any).i18n.addResourceBundle('ko', 'translation', koreanJson, true, true);
+        (i as any).i18n.addResourceBundle('pt_br', 'translation', portugeseBrazilianJson, true, true);
+        (i as any).i18n.addResourceBundle('ru', 'translation', russianJson, true, true);
+        (i as any).i18n.addResourceBundle('zh_cn', 'translation', simplifiedChineseJson, true, true);
+        (i as any).i18n.addResourceBundle('es', 'translation', spanishJson, true, true);
+        (i as any).i18n.addResourceBundle('zh_tw', 'translation', traditionalChineseJson, true, true);
       });
+
+      // Set your preferred language here.
+      i.setLanguage('en');
     });
   }
 

@@ -90,10 +90,15 @@ const migratePdfTronWebPart = () => new Promise((res, rej) => {
     './pdftron-webpart-sample/Shared Documents',
     e => !!e ? rej('Failed to migrate sample documents') : res());
 
+  const migratePdfTronLocalizationFiles = () => migrateFiles(
+    './pdftron-webpart-sample/node_modules/@pdftron/webviewer/public/ui-legacy/i18n/',
+    './pdftron-webpart-sample/src/webparts/pdfTronSample',
+    e => !!e ? rej('Failed to migrate PDFTron localization files') : migrateSampleDocs());
+
   const migratePdfTronWebPartSourceCode = () => migrateFiles(
     './web-part-src/',
     './pdftron-webpart-sample/src/webparts/pdfTronSample',
-    e => !!e ? rej('Failed to migrate PDFTron web part source code') : migrateSampleDocs());
+    e => !!e ? rej('Failed to migrate PDFTron web part source code') : migratePdfTronLocalizationFiles());
 
   const migratePdfTronWebViewerSource = () => migrateFiles(
     './pdftron-webpart-sample/node_modules/@pdftron/webviewer/public/',
