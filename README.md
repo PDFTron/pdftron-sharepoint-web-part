@@ -18,7 +18,7 @@ If you'd like to easily switch between versions of Node, check out [nvm](https:/
 To get started you'll need Yeoman and Gulp installed.
 
 ```
-npm i -g yo gulp
+npm i -g yo@3.1.0 gulp@3.9.1
 ```
 
 After this is installed you'll need to install the [*@microsoft/sharepoint*](https://www.npmjs.com/package/@microsoft/generator-sharepoint) generator
