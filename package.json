@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "init": "node ./scripts/init.js"
+    "generate-sharepoint-webviewer-sample": "node ./scripts/generate-sharepoint-webviewer-sample.js"
   },
   "author": "Michael Mitchell",
   "license": "ISC",
