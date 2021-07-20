@@ -24,7 +24,7 @@ npm i -g yo@3.1.0 gulp@3.9.1
 After this is installed you'll need to install the [*@microsoft/generator-sharepoint*](https://www.npmjs.com/package/@microsoft/generator-sharepoint) library
 
 ```
-npm i @microsoft/generator-sharepoint -g
+npm i @microsoft/generator-sharepoint@1.12.1 -g
 ```
 
 After this is done you can run `npm run generate-sharepoint-webviewer-sample` and the web part will be built for you. Go into the `pdftron-webpart-sample` directory and run `gulp serve` to start a workbench with the sample WebViewer.
