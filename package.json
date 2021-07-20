@@ -8,6 +8,7 @@
   "author": "Michael Mitchell",
   "license": "ISC",
   "dependencies": {
+    "gulp": "3.9.1",
     "ncp": "^2.0.0"
   }
 }
