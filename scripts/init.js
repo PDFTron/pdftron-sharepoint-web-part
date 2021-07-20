@@ -62,7 +62,7 @@ const installPdfTronWebViewer = () => createProcessPromise(NPM_COMMAND, [
   '--prefix',
   'pdftron-webpart-sample',
   'i',
-  '@pdftron/webviewer',
+  '@pdftron/webviewer@7.3.3',
   '--save',
 ],
   'Failed to install PDFTron WebViewer');
