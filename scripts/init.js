@@ -69,6 +69,12 @@ const installPdfTronWebViewer = () => createProcessPromise(NPM_COMMAND, [
 
 const trustDevCert = async () => {
   process.chdir('./pdftron-webpart-sample');
+  /**
+   * @note The command `gulp trust-dev-cert` fails if gulp > 3.9.1 is installed
+   * as of 2021-07-20
+   * Force install gulp@3.9.1 before running `gulp trust-dev-cert`
+   */
+  await createProcessPromise(NPM_COMMAND, ['i', 'gulp@3.9.1'], 'Failed to install gulp@3.9.1 for trusting dev certificate');
   await createProcessPromise(GULP_COMMAND, ['trust-dev-cert'], 'Failed to trust dev certificate');
   process.chdir('..');
   return Promise.resolve();
