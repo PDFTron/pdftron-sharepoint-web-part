@@ -21,6 +21,9 @@ To get started you'll need Yeoman and Gulp installed.
 npm i -g yo@3.1.0 gulp@3.9.1
 ```
 
+| :warning: Failure to use the specific versions of `yo@3.1.0` and `gulp@3.9.1` will result in scripts failing due to `@microsoft/generator-sharepoint@1.12.1` depending on these specific versions |
+| --- |
+
 After this is installed you'll need to install the [*@microsoft/generator-sharepoint*](https://www.npmjs.com/package/@microsoft/generator-sharepoint) library
 
 ```
