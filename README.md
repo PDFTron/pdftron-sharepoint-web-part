@@ -18,18 +18,21 @@ If you'd like to easily switch between versions of Node, check out [nvm](https:/
 To get started you'll need Yeoman and Gulp installed.
 
 ```
-npm i -g yo gulp
+npm i -g yo@3.1.0 gulp@3.9.1
 ```
 
-After this is installed you'll need to install the [*@microsoft/sharepoint*](https://www.npmjs.com/package/@microsoft/generator-sharepoint) generator
+| :warning: Failure to use the specific versions of `yo@3.1.0` and `gulp@3.9.1` will result in scripts failing due to `@microsoft/generator-sharepoint@1.12.1` depending on these specific versions |
+| --- |
+
+After this is installed you'll need to install the [*@microsoft/generator-sharepoint*](https://www.npmjs.com/package/@microsoft/generator-sharepoint) library
 
 ```
-npm i @microsoft/generator-sharepoint -g
+npm i @microsoft/generator-sharepoint@1.12.1 -g
 ```
 
-After this is done you can run `npm run init` and the web part will be built for you. Go into the `pdftron-webpart-sample` directory and run `gulp serve` to start a workbench with the sample WebViewer.
+After this is done you can run `npm run generate-sharepoint-webviewer-sample` and the web part will be built for you. Go into the `pdftron-webpart-sample` directory and run `gulp serve` to start a workbench with the sample WebViewer.
 
-It is worth noting that one of the commands that is executed in `npm run init` will request to install a developer
+It is worth noting that one of the commands that is executed in `npm run generate-sharepoint-webviewer-sample` will request to install a developer
 certificate for `localhost`. For more information on why this is necessary, see:
 
 https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment#trusting-the-self-signed-developer-certificate
@@ -37,7 +40,7 @@ https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-env
 ```bash
 # Please note that it is expected for this command to take upwards of 5 minutes if running natively on Windows
 # If you are running on WSL, note that it could take anywhere from 5-10 minutes
-npm run init
+npm run generate-sharepoint-webviewer-sample
 cd pdftron-webpart-sample
 gulp serve
 ```

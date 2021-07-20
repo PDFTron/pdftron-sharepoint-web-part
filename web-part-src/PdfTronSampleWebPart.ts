@@ -47,7 +47,7 @@ export default class PdftronSampleWebPartWebPart extends BaseClientSideWebPart<I
     } as any), this.domElement).then(async i => {
       const { docViewer } = i;
 
-      const options = await this.getSharedFileOptions()
+      const options = await this.getSharedFileOptions();
 
       i.setHeaderItems(header => {
         const renderSlider = () => {
